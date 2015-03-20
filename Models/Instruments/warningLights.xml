@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>warningLights.ac</path>
+
+
+<!-- Special Shaders -->
+
+<animation>
+  <type>noshadow</type>
+  <object-name>WarnABL</object-name>
+  <object-name>WarnABR</object-name>
+  <object-name>WarnFuel</object-name>
+</animation>
+
+
+
+<!-- Warnings and notice lights -->
+
+<animation>
+  <type>select</type>
+  <object-name>WarnABL</object-name>
+  <condition>
+    <property>sim/multiplay/generic/float[2]</property>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>WarnABR</object-name>
+  <condition>
+    <property>sim/multiplay/generic/float[3]</property>
+  </condition>
+</animation>
+
+
+
+<animation>
+  <type>select</type>
+  <object-name>WarnFuel</object-name>
+  <condition>
+    <less-than>
+      <property>consumables/fuel/total-fuel-lbs</property>
+      <value>1000</value>
+    </less-than>
+  </condition>
+</animation>
+
+
+</PropertyList>
+

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!-- Specific keys -->
+
+  <key>
+    <name>k</name>
+    <desc>Extend Airbrake (4 positions)</desc>
+  </key>
+  <key>
+    <name>j</name>
+    <desc>Retract Airbrake (4 positions)</desc>
+  </key>
+  <key>
+    <name>f</name>
+    <desc>Extend Leading Edge Slats (4 positions)</desc>
+  </key>
+  <key>
+    <name>d</name>
+    <desc>Retract Leading Edge Slats</desc>
+  </key>
+
+ <!-- <key>
+    <name>ctrl-I</name>
+    <desc>Configuration Options And Settings</desc>
+  </key>
+ -->
+
+<!-- FDM ops -->
+
+<text>
+
+Air Brakes can be used for increasing lift and high maneuverability
+at low speed 
+ use flaps and slats to increase drag 
+
+
+Flaps extend to 20 degrees, with 4 positions:
+  3.2, 6.4, 12.8, 20
+
+
+Reheat engages at 90% throttle or greater.
+
+Takeoff :
+  flaps 2/4
+  before starting keep Left Engine throttel at 20% and Right Engine 
+  throttel at 0%. Then release parking brakes and push both throttel 
+  at the same time such that Left Engine throttel is at 60% 
+ (Do not use full throttel for Takeoff ) 
+ 
+ 
+Landing :
+  use flaps and slats to increase drag 
+  use Air Brakes as required before touchdown to get extra lift 
+  After touchdown Do Not use Air Brakes  
+  
+</text>
+
+</PropertyList>

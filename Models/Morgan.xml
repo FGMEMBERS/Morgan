@@ -1,0 +1,858 @@
+<?xml version="1.0"?>
+
+<!-- ADFX-Morgan -->
+<!-- Anirudh Prabhu  2011-->
+
+<PropertyList> 
+
+    <path>Morgan.ac</path>
+
+    <nasal>
+      <load>
+          var livery_update = aircraft.livery_update.new("Aircraft/Morgan/Models/Liveries", 10);
+      </load>
+
+      <unload>
+        livery_update.stop();
+      </unload>
+    </nasal>
+
+
+
+
+<model>
+  <name>Reheat</name>
+  <path>Aircraft/Morgan/Models/Reheat.xml</path>
+</model>
+
+
+<!-- Livery  -->
+
+  <animation>
+    <type>material</type>
+    <object-name>FrontCol</object-name>
+   <!-- <object-name>FrontCol</object-name> -->
+    <object-name>elevL</object-name>
+    <object-name>elevR</object-name>
+    <object-name>Rwing</object-name>
+    <object-name>Lwing</object-name>
+    <object-name>alerR</object-name>
+    <object-name>alerL</object-name>
+    <object-name>flapR</object-name>
+    <object-name>flapL</object-name>
+    <object-name>speedBU</object-name>
+    <object-name>speedBD</object-name>
+    <object-name>rudRD</object-name>
+    <object-name>rudLD</object-name>
+    <object-name>rudLU</object-name>
+    <object-name>rudRU</object-name>
+<!--
+   <object-name>FrontA</object-name> 
+   <object-name>FrontB</object-name> 
+ -->
+    
+   
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>Russian_north_sea.png</texture>
+<!--
+    <diffuse>
+      <red-prop>diffuse/red</red-prop>
+      <green-prop>diffuse/green</green-prop>
+      <blue-prop>diffuse/blue</blue-prop>
+    </diffuse>
+
+    <ambient>
+      <red-prop>ambient/red</red-prop>
+      <green-prop>ambient/green</green-prop>
+      <blue-prop>ambient/blue</blue-prop>
+    </ambient>
+-->
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+  <!--
+    <shininess>
+      <shininess-prop>shininess</shininess-prop>
+    </shininess>
+   -->
+  </animation>
+
+
+
+
+<!-- wingTip Trails -->
+<model>
+    <path>Aircraft/Morgan/Models/Effects/tiptrail/tiptrail.xml</path>
+    <offsets>
+      <x-m>  8.42 </x-m>
+      <y-m> -7.61 </y-m>
+      <z-m> 0.99 </z-m>
+    </offsets>
+  </model>
+
+  
+  <model>
+    <path>Aircraft/Morgan/Models/Effects/tiptrail/tiptrail.xml</path>
+    <offsets>
+      <x-m>  8.42 </x-m>
+      <y-m>  7.61 </y-m>
+      <z-m>  0.99 </z-m>
+    </offsets>
+  </model>
+
+   <model>
+    <path>Aircraft/Morgan/Models/Instruments/ramps.xml</path>
+    <offsets>
+      <x-m>  -0.95 </x-m>
+      <y-m>   0.245 </y-m>
+      <z-m>   1.60 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Morgan/Models/Instruments/pfdb2.xml</path>
+    <offsets>
+      <x-m>  -0.95 </x-m>
+      <y-m>   0.0 </y-m>
+      <z-m>   1.589 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Morgan/Models/Instruments/nd.xml</path>
+    <offsets>
+      <x-m>  -0.95 </x-m>
+      <y-m>   -0.205 </y-m>
+      <z-m>   1.505 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Morgan/Models/Instruments/fltdir.xml</path>
+    <offsets>
+      <x-m>  -0.95 </x-m>
+      <y-m>   -0.255 </y-m>
+      <z-m>   1.25 </z-m>
+    </offsets>
+  </model>
+
+ <model>
+    <path>Aircraft/Morgan/Models/Instruments/throttle.xml</path>
+    <offsets>
+      <x-m>  -0.65 </x-m>
+      <y-m>  -0.35 </y-m>
+      <z-m>   1.3675 </z-m>
+    </offsets>
+  </model>
+
+<!-- Stick -->
+ <model>
+    <path>Aircraft/Morgan/Models/Instruments/stick.xml</path>
+    <offsets>
+      <x-m>  -0.75 </x-m>
+      <y-m>   0.0 </y-m>
+      <z-m>   1.2 </z-m>
+    </offsets>
+  </model>
+
+  
+ <model>
+    <path>Aircraft/Morgan/Models/Instruments/radar-alti.xml</path>
+    <offsets>
+      <x-m>  -0.95 </x-m>
+      <y-m>   0.153 </y-m>
+      <z-m>   1.64 </z-m>
+    </offsets>
+  </model>
+<!-- fuel gauge -->
+ <model>
+    <path>Aircraft/Morgan/Models/Instruments/fuel-gauge.xml</path>
+    <offsets>
+      <x-m>  -0.95 </x-m>
+      <y-m>   0.153 </y-m>
+      <z-m>   1.545 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AOA  -->
+ <model>
+    <path>Aircraft/Morgan/Models/Instruments/aoa.xml</path>
+    <offsets>
+      <x-m>  -0.95 </x-m>
+      <y-m>  -0.135 </y-m>
+      <z-m>   1.635 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Switch Landing Light -->
+  <model>
+    <path>Aircraft/Morgan/Models/Effects/light/landing-lights.xml</path>
+    <offsets>
+      <x-m> -0.95 </x-m>
+      <y-m> -0.35 </y-m>
+      <z-m>  1.545 </z-m>
+    </offsets>
+  </model>
+
+<!-- Warning lights -->
+<model>
+    <path>Aircraft/Morgan/Models/Instruments/warningLights.xml</path>
+    <offsets>
+      <x-m>  -0.97 </x-m>
+      <y-m>  -0.22 </y-m>
+      <z-m>   1.635 </z-m>
+    </offsets>
+  </model>
+
+
+
+<!-- Landing Gear Panel -->
+ <model>
+    <path>Aircraft/Morgan/Models/Instruments/ld-gear-panel.xml</path>
+    <offsets>
+      <x-m>  -0.935 </x-m>
+      <y-m>   -0.379 </y-m>
+      <z-m>   1.433 </z-m>
+      <heading-deg>23</heading-deg>
+    </offsets>
+  </model>
+
+<!-- Parking Brakes -->
+  <model>
+    <path>Aircraft/Morgan/Models/Instruments/parking-brake.xml</path>
+    <offsets>
+      <x-m>  -0.95 </x-m>
+      <y-m>  -0.28 </y-m>
+      <z-m>   1.31 </z-m>
+    </offsets>
+  </model>
+
+
+<!-- Vapour -->
+  <model>
+	<path>Aircraft/Morgan/Models/Effects/Vapour/vapour.xml</path>
+		<offsets>
+			<x-m>9.71</x-m>
+			<y-m>-3.01</y-m>
+			<z-m>1.64</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+ </model>
+ <model>
+	<path>Aircraft/Morgan/Models/Effects/Vapour/vapour.xml</path>
+		<offsets>
+			<x-m>8.02</x-m>
+			<y-m>-1.61</y-m>
+			<z-m>1.73</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+ </model>
+ <model>
+	<path>Aircraft/Morgan/Models/Effects/Vapour/vapour.xml</path>
+		<offsets>
+			<x-m>8.02</x-m>
+			<y-m>1.61</y-m>
+			<z-m>1.73</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+ </model>
+ <model>
+	<path>Aircraft/Morgan/Models/Effects/Vapour/vapour.xml</path>
+		<offsets>
+			<x-m>9.71</x-m>
+			<y-m>3.01</y-m>
+			<z-m>1.64</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+ </model>
+
+<!-- ShockWave -->
+<model>
+	<path>Aircraft/Morgan/Models/Effects/shockWave/shockWave.xml</path>
+		<offsets>
+			<x-m>7.70</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.6</z-m>
+		</offsets>
+ </model>
+
+
+
+
+
+  <animation>
+    <type>select</type>
+    <object-name>HULL_Nose_WWell</object-name>
+	<object-name>HULL_Nose_Door_Front_Int</object-name>
+	<object-name>HULL_Nose_Door_Rear_Int</object-name>
+    <object-name>UC_Nose_Upper_Strut</object-name>
+    <object-name>UC_Nose_Lower_Strut</object-name>
+	<object-name>UC_Nose_LLights</object-name>
+	<object-name>UC_Nose_Upright_Brace</object-name>
+    <object-name>UC_Nose_WGuard</object-name>
+    <object-name>UC_Nose_Tyres</object-name>
+    <object-name>UC_Nose_Hubs</object-name>
+    <object-name>UC_Nose_BSArm</object-name>
+    <object-name>UC_Nose_Rear_Post</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[0]/position-norm</property>
+        <value>0.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+
+
+<!-- Left Main -->
+<!-- De-select non-visibile parts when retracted -->
+  <animation>
+    <type>select</type>
+    <object-name>HULL_LM_WWell</object-name>
+	<object-name>HULL_LMR_Door_Int</object-name>
+	<object-name>HULL_LMF_Door_Int</object-name>
+    <object-name>UC_Main_Left_Upper_Strut</object-name>
+    <object-name>UC_Main_Left_Tyre</object-name>
+	<object-name>UC_Main_Left_Hub</object-name>
+	<object-name>UC_Main_Left_Upper_DArm</object-name>
+	<object-name>UC_Main_Left_Lower_DArm</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+
+<!-- Right Main -->
+<!-- De-select non-visibile parts when retracted -->
+  <animation>
+    <type>select</type>
+    <object-name>HULL_RM_WWell</object-name>
+	<object-name>HULL_RMR_Door_Int</object-name>
+	<object-name>HULL_RMF_Door_Int</object-name>
+    <object-name>UC_Main_Right_Upper_Strut</object-name>
+    <object-name>UC_Main_Right_Tyre</object-name>
+	<object-name>UC_Main_Right_Hub</object-name>
+	<object-name>UC_Main_Right_Upper_DArm</object-name>
+	<object-name>UC_Main_Right_Lower_DArm</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[2]/position-norm</property>
+        <value>0.0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+
+<!-- Air Brake -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>speedBU</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>-56</factor> 
+  <axis>
+    <x1-m>11.27</x1-m>
+    <y1-m>-1.06</y1-m>
+    <z1-m>0.98</z1-m>
+    <x2-m>11.27</x2-m>
+    <y2-m>1.06</y2-m>
+    <z2-m>0.98</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>speedBD</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>30</factor> 
+  <axis>
+    <x1-m>11.21</x1-m>
+    <y1-m>-1.06</y1-m>
+    <z1-m>0.84</z1-m>
+    <x2-m>11.21</x2-m>
+    <y2-m>1.06</y2-m>
+    <z2-m>0.84</z2-m>
+  </axis>
+</animation>
+
+
+<!-- elevator -->
+    <animation> 
+      <type>rotate</type>
+      <object-name>elevL</object-name>
+      <object-name>elevR</object-name>
+      <property>surface-positions/elevator-pos-norm</property>
+      <factor>-18</factor>
+      <center> 
+        <x-m>3.78</x-m>
+        <y-m>0</y-m>
+        <z-m>0.94</z-m>
+      </center>
+      <axis> 
+           <x>0</x>
+           <y>1.0</y>
+           <z>0</z>
+      </axis>
+    </animation>
+
+<!-- Aileron -->
+<!-- Left -->
+  <animation>
+	<type>rotate</type>
+	<object-name>alerL</object-name>
+   	<property>controls/flight/aileron</property>  
+        <!-- <property>surface-positions/left-aileron-pos-norm</property> -->
+      <factor>20</factor>
+       <offset-deg>0</offset-deg>  
+        <!-- <axis>
+		<x1-m>8.53</x1-m> <x2-m>9.53</x2-m>
+		<y1-m>-7.22</y1-m> <y2-m>-6.18</y2-m>
+		<z1-m>7.29</z1-m> <z2-m>7.29</z2-m>
+	      </axis>
+        -->
+    <center>
+      <x-m>9.53</x-m>
+      <y-m>-6.18</y-m>
+      <z-m>0.99</z-m>
+    </center>
+    <axis>
+      <x>15.49</x>
+      <y>0</y>
+      <z>1.03</z>
+    </axis>
+      
+  </animation>
+
+<!-- Right -->
+  <animation>
+	<type>rotate</type>
+	<object-name>alerR</object-name>
+      <property>controls/flight/aileron</property> 
+       <!-- <property>surface-positions/right-aileron-pos-norm</property> -->
+      <factor>20</factor>
+      <offset-deg>0</offset-deg> 
+        <!-- <axis>
+		<x1-m>8.53</x1-m> <x2-m>9.53</x2-m>
+		<y1-m>7.22</y1-m> <y2-m>6.18</y2-m>
+		<z1-m>7.29</z1-m> <z2-m>7.29</z2-m>
+       	</axis>
+         -->
+    <center> 
+      <x-m>9.53</x-m>
+      <y-m>6.18</y-m>
+      <z-m>0.99</z-m>
+    </center>
+     
+     <axis>
+      <x>15.49</x>
+      <y>0</y>
+      <z>1.03</z>
+     </axis>
+       
+  </animation>
+
+<!-- Nose Gear -->
+<!-- Compression -->
+  <animation>
+	<type>translate</type>
+	<object-name>UC_Nose_Lower_Strut</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+	<factor>0.14</factor>
+    <axis>
+      <x>0.1007</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_Tyres</object-name>
+	<object-name>UC_Nose_Hubs</object-name>
+	<object-name>UC_Nose_BSArm</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>0.0</dep>
+      </entry>
+      <entry>
+        <ind>0.3333</ind>
+        <dep>-26</dep>
+      </entry>
+      <entry>
+        <ind>0.6666</ind>
+        <dep>-42</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>-56</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>1.59</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.89</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_WGuard</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+	<factor>-60</factor>
+    <center>
+      <x-m>1.17</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.88</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+
+<!-- Counter-rotate -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Nose_WGuard</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+	<factor>60</factor>
+    <center>
+      <x-m>1.42</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-1.39</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+
+<!-- Left Gear -->
+<!-- Compression -->
+  <animation>
+	<type>translate</type>
+	<object-name>UC_Main_Left_Hub</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+	<factor>0.8</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <!-- Compression -->
+  <animation>
+	<type>translate</type>
+	<object-name>UC_Main_Left_Tyre</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+	<factor>0.8</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+ <!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Upper_DArm</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>9.84</x-m>
+      <y-m>-3.23</y-m>
+      <z-m>-0.28</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Lower_DArm</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>9.84</x-m>
+      <y-m>-3.23</y-m>
+      <z-m>-0.28</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Left_Lower_DArm</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>110</factor>
+    <center>
+      <x-m>9.95</x-m>
+      <y-m>-3.23</y-m>
+      <z-m>-0.58</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Right Gear -->
+  <!-- Compression -->
+  <animation>
+	<type>translate</type>
+	<object-name>UC_Main_Right_Hub</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+	<factor>0.8</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+ <!-- Compression -->
+  <animation>
+	<type>translate</type>
+	<object-name>UC_Main_Right_Tyre</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+	<factor>0.8</factor>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+ <!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Upper_DArm</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>9.84</x-m>
+      <y-m>3.23</y-m>
+      <z-m>-0.28</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+ <!-- Compression -->
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Lower_DArm</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>-90</factor>
+    <center>
+      <x-m>9.84</x-m>
+      <y-m>3.23</y-m>
+      <z-m>-0.28</z-m> 
+      
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+	<type>rotate</type>
+	<object-name>UC_Main_Right_Lower_DArm</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>110</factor>
+    <center>
+      <x-m>9.95</x-m>
+      <y-m>3.23</y-m>
+      <z-m>-0.58</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+<!-- Flaps -->
+<!--
+<animation>
+	<type>rotate</type>
+	<object-name>flapL</object-name>
+	<property>surface-positions/flap-pos-norm</property> 
+	<factor>45</factor>
+	<axis>
+		<x1-m>9.53</x1-m> <x2-m>11.2</x2-m>
+		<y1-m>-6.18</y1-m>   <y2-m>-4.45</y2-m>
+		<z1-m>6.16</z1-m>  <z2-m>4.45</z2-m>
+	</axis>
+</animation>
+
+
+<animation>
+	<type>rotate</type>
+	<object-name>flapR</object-name>
+    	<property>surface-positions/flap-pos-norm</property>  
+      	<factor>-45</factor>
+	<axis>
+		<x1-m>9.53</x1-m> <x2-m>11.2</x2-m>
+		<y1-m>6.18</y1-m>    <y2-m>4.45</y2-m>
+		<z1-m>6.16</z1-m>  <z2-m>4.45</z2-m>
+	</axis>
+</animation>
+-->
+
+
+<!-- Rudders -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>rudLU</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>-21</factor>
+  <axis>
+    <x1-m>12.54</x1-m>
+    <y1-m>-3.42</y1-m>
+    <z1-m>3.48</z1-m>
+    <x2-m>12.07</x2-m>
+    <y2-m>-3.56</y2-m>
+    <z2-m>1.63</z2-m>
+  </axis>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>rudRU</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>-21</factor>
+  <axis>
+    <x1-m>12.54</x1-m>
+    <y1-m>3.42</y1-m>
+    <z1-m>3.48</z1-m>
+    <x2-m>12.07</x2-m>
+    <y2-m>3.56</y2-m>
+    <z2-m>1.63</z2-m>
+  </axis>
+</animation>
+
+
+
+  <!-- Landing Gear light cone -->
+  <model>
+    <name>LightCone</name>
+    <path>Aircraft/Morgan/Models/Effects/light/light-cone.xml</path>
+    <offsets>
+      <x-m> 1.33 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> 0.09 </z-m>
+      <pitch-deg> -11.0 </pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>LightCone</object-name>
+    <condition>
+      <!-- <equals>  -->
+      <and>
+        <property>controls/switches/landing-light</property>
+        <value> 1 </value>
+
+        <property>gear/gear[0]/position-norm</property>
+        <value type="bool">true</value>
+      </and>
+     <!-- </equals> -->
+    </condition>
+  </animation>
+
+
+<!-- Turbine Hot animation -->
+
+  <animation>
+    <object-name>turbineHot</object-name>
+  </animation>
+
+<animation>
+  <type>blend</type>
+  <object-name>turbineHot</object-name>
+		<property>engines/engine[0]/n1</property>
+		<offset>95</offset>
+		<factor>-1</factor>
+</animation>
+
+
+
+<!-- Smoke -->
+
+
+<!--
+  <model>
+    <path>Aircraft/Morgan/Models/Effects/Smoke/smoke.xml</path>
+    <offsets>
+      <x-m>11.7</x-m>
+      <y-m>0</y-m>
+      <z-m>-0.5</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+  <nasal>
+    <load>
+      var self=cmdarg();
+      self.getNode("smoke/active").alias(self.getNode("sim/multiplay/generic/int[0]"));
+      self.getNode("smoke/red").alias(self.getNode("sim/multiplay/generic/float[0]"));
+      self.getNode("smoke/green").alias(self.getNode("sim/multiplay/generic/float[1]"));
+      self.getNode("smoke/blue").alias(self.getNode("sim/multiplay/generic/float[2]"));
+      self.getNode("smoke/particlepersec").setValue(50);
+    </load>
+  </nasal>
+ -->
+
+
+</PropertyList>

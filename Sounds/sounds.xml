@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+
+ <fx>
+  
+  <gear>
+   <name>gear</name>
+   <mode>in-transit</mode>
+   <path>Aircraft/Morgan/Sounds/gear.wav</path>
+   <property>/gear/gear[0]/position-norm</property>
+   <pitch>
+    <internal>dt_play</internal>
+    <offset>1.0</offset>
+    <factor>-0.001</factor>
+   </pitch>
+  </gear>
+
+  <gear>
+   <name>gear-lock</name>
+   <path>Sounds/gear-lck.wav</path>
+   <condition>
+    <equals>
+     <property>/gear/gear[0]/position-norm</property>
+     <value>0</value>
+    </equals>
+   </condition>
+  </gear>
+  
+ 
+  <flap>
+   <name>flaps</name>
+   <mode>in-transit</mode>
+   <path>Sounds/flaps.wav</path>
+  <!-- <property>/controls/doors/bb-door-pos-norm</property>  -->
+    <property>surface-positions/flap-pos-norm</property>   
+   <volume> 
+    <factor>0.85</factor>
+   </volume>
+  </flap>
+
+ 
+<voice>
+  <name>Geforce-breath-vox</name>
+  <path>Aircraft/Morgan/Sounds/Geforce.wav</path>
+  <condition>
+   <greater-than>
+    <property>/accelerations/pilot/z-accel-fps_sec</property>
+    <value>-161</value>
+   </greater-than>   
+  </condition>
+<volume>
+<factor>0.9</factor>
+</volume>
+ </voice>
+
+<voice>
+  <name>Geforce-vox</name>
+  <path>Aircraft/Morgan/Sounds/geforce1.wav</path>
+  <condition>
+   <less-than>
+    <property>/accelerations/pilot/z-accel-fps_sec</property>
+        <!-- <value>-225</value> -->
+   <value>-180</value>  
+   </less-than>   
+  </condition>
+<volume>
+<factor>0.9</factor>
+</volume>
+ </voice>
+
+
+
+  <!-- Sonic Boom -->
+  <sonicboom>
+   <name>Sonic Boom</name>
+	<mode>once</mode>
+   <path>Aircraft/Morgan/Sounds/sonicboom.wav</path>
+   <condition>
+   <and>
+	    <greater-than>
+	     	<property>/velocities/mach</property>
+	     	<value>1.0</value>
+	    </greater-than>
+          <less-than>    
+               <property>/velocities/mach</property>
+           	   <value>1.15</value>
+          </less-than>      
+        <!--
+	    <equals>
+		    <property>/sim/current-view/internal</property>
+		    <value>false</value>
+		</equals>  -->
+	</and>
+   </condition>
+  </sonicboom>
+  
+
+
+
+<!-- Engine -->
+
+
+<engine>
+   <name>engine1</name>
+   <mode>looped</mode>
+   <path>Aircraft/Morgan/Sounds/milpower.wav</path>
+   <condition>
+    <property>/engines/engine[0]/running</property>
+    <not>
+      <property>/sim/current-view/internal</property>
+    </not>
+   </condition>
+   <orientation>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>180.0</z>
+    <inner-cone>180.0</inner-cone>
+    <outer-cone>360.0</outer-cone>
+    <outer-gain>0.2</outer-gain>
+   </orientation>
+   <volume>
+    <property>/controls/engines/engine[0]/throttle</property>
+    <factor>0.35</factor>
+   <!-- <min>0.1</min>
+        <max>0.5</max>
+    -->
+      <min>0.1</min>
+      <max>0.45</max>
+
+   </volume>
+  </engine>
+
+  <engine>
+   <name>engine2</name>
+   <mode>looped</mode>
+   <path>Aircraft/Morgan/Sounds/milpower.wav</path>
+   <condition>
+    <property>/engines/engine[1]/running</property>
+    <not>
+     <property>/sim/current-view/internal</property>
+    </not>
+   </condition>
+   <orientation>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>180.0</z>
+    <inner-cone>180.0</inner-cone>
+    <outer-cone>360.0</outer-cone>
+    <outer-gain>0.2</outer-gain>
+   </orientation>
+   <volume>
+    <property>/controls/engines/engine[1]/throttle</property>
+    <factor>0.35</factor>
+    <min>0.1</min>
+    <max>0.45</max>
+   </volume>
+  </engine>
+
+  <engine>
+   <name>engine1-from-cockpit</name>
+   <mode>looped</mode>
+   <path>Aircraft/Morgan/Sounds/milpower.wav</path>
+   <condition>
+    <property>/engines/engine[0]/running</property>
+     <property>/sim/current-view/internal</property>
+   </condition>
+   <volume>
+    <property>/controls/engines/engine[0]/throttle</property>
+    <factor>0.2</factor>
+    <min>0.05</min>
+    <max>0.2</max>
+   </volume>
+  </engine>
+
+  <engine>
+   <name>engine2-from-cockpit</name>
+   <mode>looped</mode>
+   <path>Aircraft/Morgan/Sounds/milpower.wav</path>
+   <condition>
+    <property>/engines/engine[1]/running</property>
+     <property>/sim/current-view/internal</property>
+   </condition>
+   <volume>
+    <property>/controls/engines/engine[1]/throttle</property>
+    <factor>0.2</factor>
+    <min>0.05</min>
+    <max>0.2</max>
+   </volume>
+  </engine>
+
+  <engine>
+   <name>burner</name>
+   <mode>looped</mode>
+   <path>Aircraft/Morgan/Sounds/afterburner.wav</path>
+   <condition>
+    <or>
+    <property>/engines/engine[0]/augmentation</property>
+    <property>/engines/engine[1]/augmentation</property>
+    </or>
+    <not>
+     <property>/sim/current-view/internal</property>
+    </not>
+   </condition>
+   <orientation>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>180.0</z>
+    <inner-cone>180.0</inner-cone>
+    <outer-cone>360.0</outer-cone>
+    <outer-gain>0.2</outer-gain>
+   </orientation>
+   <volume>
+    <property>/controls/throttle[0]</property>
+    <factor>1</factor>
+  <!--  <min>0.4</min>
+        <max>0.5</max>
+   -->
+    <min>0.35</min>
+    <max>0.6</max>
+
+   </volume>
+  </engine>
+
+  <engine>
+   <name>burner-from-cockpit</name>
+   <mode>looped</mode>
+   <path>Aircraft/Morgan/Sounds/afterburner.wav</path>
+   <condition>
+    <or>
+     <property>/engines/engine[0]/augmentation</property>
+     <property>/engines/engine[1]/augmentation</property>
+    </or>
+    <property>/sim/current-view/internal</property>
+   </condition>
+   <volume>
+    <property>/controls/throttle[0]</property>
+    <factor>0.1</factor>
+    <min>0.1</min>
+    <max>0.1</max>
+   </volume>
+  </engine>
+
+  <engine>
+   <name>compressor-whine-external-engine0</name>
+   <path>Sounds/turbojet_fan.wav</path>
+   <mode>looped</mode>
+   <condition>
+    <not>
+     <property>/sim/current-view/internal</property>
+    </not>
+    <greater-than>
+      <property>/engines/engine[0]/n2</property>
+      <value>1</value>
+    </greater-than>
+   </condition>
+   <orientation>
+    <x> 0.0</x>
+    <y> 0.0</y>
+    <z> 180.0</z>
+    <inner-cone>50.0</inner-cone>
+    <outer-cone>180.0</outer-cone>
+    <outer-gain>0.5</outer-gain>
+   </orientation>
+   <pitch>
+    <property>/engines/engine[0]/n2</property>
+    <factor>.001</factor>
+   </pitch>
+   <volume>
+    <property>/engines/engine[0]/n2</property>
+    <factor>0.000167</factor>
+    <min>0.00</min>
+    <max>0.167</max>
+   </volume>
+  </engine>
+
+  <engine>
+   <name>compressor-whine-external-engine1</name>
+   <path>Sounds/turbojet_fan.wav</path>
+   <mode>looped</mode>
+   <condition>
+    <not>
+     <property>/sim/current-view/internal</property>
+    </not>
+    <greater-than>
+      <property>/engines/engine[1]/n2</property>
+      <value>1</value>
+    </greater-than>
+   </condition>
+   <orientation>
+    <x> 0.0</x>
+    <y> 0.0</y>
+    <z> 180.0</z>
+    <inner-cone>50.0</inner-cone>
+    <outer-cone>180.0</outer-cone>
+    <outer-gain>0.5</outer-gain>
+   </orientation>
+   <pitch>
+    <property>/engines/engine[1]/n2</property>
+    <factor>.001</factor>
+   </pitch>
+   <volume>
+    <property>/engines/engine[1]/n2</property>
+    <factor>0.000167</factor>
+    <min>0.00</min>
+    <max>0.167</max>
+   </volume>
+  </engine>
+
+
+
+
+
+</fx>
+ 
+</PropertyList>
